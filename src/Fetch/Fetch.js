@@ -41,5 +41,25 @@ const Delete = async (id)=>{
 export {Delete}
 
 //Post
+const Post = async(datos) =>{
+    try {
+        const respuesta = await fetch(URL,{
+            method:"POST",
+            headers:
+            {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datos)
+        })
+        const data = await respuesta.json()
+        console.log(data)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+export {Post}
+
+
 //Put
 
