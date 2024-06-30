@@ -62,4 +62,22 @@ export {Post}
 
 
 //Put
+const Put = async(id,estado)=>{
+    try {
+        const nuevoEstado = {
+            estado: !estado
+        }
+        const answer = await fetch (URL+id,{
+            method:"PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(nuevoEstado)
+        })
+        const data = await answer.json()
+        console.log(data);
+    } catch (error) {
+        console.log(error )
+    }
+}
 
