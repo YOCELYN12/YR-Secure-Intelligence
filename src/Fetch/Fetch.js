@@ -1,4 +1,4 @@
-const URL =  "http://localhost:3001/"
+const URL =  "http://localhost:3001/api/task/"
 
 //Get
 const Get = async()=>{
@@ -39,6 +39,7 @@ const Delete = async (id)=>{
 }
 
 export {Delete}
+
 
 //Post
 const Post = async(datos) =>{
