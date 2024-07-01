@@ -5,33 +5,7 @@ import Registro from './Registro'
 
 const Login = () => {
   const navegar = useNavigate()
-  const [intEmail, setIntEmail] = useState("")
-  const [intPassword, setIntPassword] = useState("")
-
-  const validarUser = async (e) => {
-
-    try {
-      e.preventDefault()
-      const data = await Get()
-      data.forEach(datos => {
-
-        if (intEmail == datos.intEmail && intPassword == datos.intPassword) {
-          console.log("hola")
-          estado = true
-
-          alert("Bienvenido")
-        } else (console.log("error"))
-
-      });
-
-    } catch (error) {
-      console.log("eror")
-    }
-
-
-  }
-
-
+ 
 
   return (
     <div>
