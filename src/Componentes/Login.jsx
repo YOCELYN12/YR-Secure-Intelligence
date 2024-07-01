@@ -7,7 +7,7 @@ const Login = () => {
   const navegar = useNavigate()
   const [intEmail, setIntEmail] = useState("")
   const [intPassword, setIntPassword] = useState("")
-
+  
   const validarUser = async (e) => {
 
     try {
@@ -15,10 +15,9 @@ const Login = () => {
       const data = await Get()
       data.forEach(datos => {
 
-        if (intEmail == datos.intEmail && intPassword == datos.intPassword) {
+        if (intEmail === datos.email && intPassword=== datos.password) {
           console.log("hola")
-          estado = true
-
+          window.location.href = ("./Home")
           alert("Bienvenido")
         } else (console.log("error"))
 
@@ -28,18 +27,15 @@ const Login = () => {
       console.log("eror")
     }
 
-
   }
-
-
 
   return (
     <div>
       <h1>Login</h1>
 
-      <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e)=> setIntEmail(e.target.value)}/>
-      <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} />
-      <button onClick={validarUser} >Logearse</button>
+      <input type="text" placeholder='EMAIL'  value={intEmail} onChange={(e)=> setIntEmail(e.target.value)}/>
+      <input type="text" placeholder='PASSWORD'  value={intPassword} onChange={(e) => setIntPassword(e.target.value) } />
+      <button onClick={validarUser}  >Logearse</button>
 
       <button onClick={() => (navegar("/Registro"))}>Registro</button>
       <button onClick={() => (navegar("/PaginaInicio"))}>Pagina inicio</button>

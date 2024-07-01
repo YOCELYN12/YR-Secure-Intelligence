@@ -8,6 +8,7 @@ const Registro = () => {
   const [intName, setIntName] = useState("")
   const [intEmail, setIntEmail] = useState("")
   const [intPassword, setIntPassword] = useState("")
+  const estado = useState(false)
 
   const registrarse = async (e) => {
     e.preventDefault()
@@ -15,7 +16,7 @@ const Registro = () => {
       nombre:intName,
       email:intEmail,
       password:intPassword,
-      estado: false
+      estado: estado
     }
     await Post(datos)
   }
