@@ -1,12 +1,11 @@
-const URL =  "http://localhost:3001/db.json"
+const URL =  "http://localhost:2929/"
 
 //Get
-const Get = async()=>{
+const Get = async(endpoint)=>{
     try {
-        const peticion = await fetch(URL)
+        const peticion = await fetch(URL+endpoint)
         const datos = await peticion.json()
         return datos
-
     } catch (error) {
         console.log(error)
     }
@@ -15,9 +14,9 @@ const Get = async()=>{
 export {Get}
 
 //Delete
-const Delete = async (id)=>{
+const Delete = async (id,endpoint)=>{
     try {
-        const eliminar = await fetch(URL,id, {
+        const eliminar = await fetch(URL+id+endpoint, {
             method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -42,9 +41,9 @@ export {Delete}
 
 
 //Post
-const Post = async(datos) =>{
+const Post = async(datos,endpoint) =>{
     try {
-        const respuesta = await fetch(URL,{
+        const respuesta = await fetch(URL+endpoint,{
             method:"POST",
             headers:
             {
@@ -63,12 +62,12 @@ export {Post}
 
 
 //Put
-const Put = async(id,estado)=>{
+const Put = async(id,estado,endpoint)=>{
     try {
         const nuevoEstado = {
             estado: !estado
         }
-        const answer = await fetch (URL+id,{
+        const answer = await fetch (URL+id+endpoint,{
             method:"PUT",
             headers:{
                 "Content-Type": "application/json"

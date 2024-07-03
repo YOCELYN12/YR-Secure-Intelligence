@@ -10,12 +10,9 @@ const Login = () => {
   const [intPassword, setIntPassword] = useState("")
 
   const validarUser = async (e) => {
-    
     try {
-      
       e.preventDefault()
-      
-      const data = await Get()
+      const data = await Get( "users")
       
       data.forEach(datos => {
        

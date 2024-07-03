@@ -13,10 +13,6 @@ const Registro = () => {
   const [intName, setIntName] = useState("")
   const [intEmail, setIntEmail] = useState("")
   const [intPassword, setIntPassword] = useState("")
-  
-
-  //costante para utilizar el hook de usesSate en el estado de los usuarios 
-  const estado = useState(false)
 
   //evento del boton registrarse, para que en el momento que detecte un click se agreguen los datos en la API
   const registrarse = async (e) => {
@@ -24,21 +20,14 @@ const Registro = () => {
     let datos = {
       nombre: intName,
       email: intEmail,
-      password: intPassword,
-      estado: estado
+      password: intPassword
     }
-    if (intName==("")|| intName==("")|| intPassword("")){
-      return alert("ingrese texto en los espacios vacios")
-    }
-    await Post(datos)
+  
+    await Post(datos, "users")
   }
 
-
   return (
-
-
     <>
-
       <header className='header'>
 
         <div className='logo'>

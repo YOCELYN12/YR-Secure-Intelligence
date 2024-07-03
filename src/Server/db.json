@@ -1,65 +1,32 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "John Doe", 
-      "email": "john@example.com" 
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "2000"
     },
-
-    { 
-      "id": 2, 
-      "name": " Audifonos",
-      "email": "jane@example.com"
-    },
-
-    { 
-      "id": 3, 
-      "name": "Mause",
-      "email": "jane@example.com"
-    },
-
-    { 
-      "id": 2, 
-      "name": "Teclado",
-      "email": "jane@example.com"
-    }
-
-    ],
-
-    "productos": [
     {
-      "id": 1,
-      "name": "John Doe", 
-      "email": "john@example.com" 
-    },
-
-    { 
-      "id": 2, 
-      "name": " Audifonos",
-      "email": "jane@example.com"
-    },
-
-    { 
-      "id": 3, 
-      "name": "Mause",
-      "email": "jane@example.com"
-    },
-
-    { 
-      "id": 2, 
-      "name": "Teclado",
-      "email": "jane@example.com"
+      "id": "6504",
+      "name": "EFEFFE",
+      "email": "FEEFEF",
+      "password": "EFFEF"
     }
+  ],
 
-    ]
-    
+  "productos": [
+    {
+      "id": "1",
+      "producto": "Mouse",
+      "precio": "2000",
+      "marca":"PATITO"
+    },
 
-    
-
-    
-
-    
+    {
+      "id": "2",
+      "producto": " Audifonos",
+      "precio": "jane@example.com",
+      "marca": "patito"
+    }
+  ]
 }
-
-
-
