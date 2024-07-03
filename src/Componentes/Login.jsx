@@ -10,22 +10,23 @@ const Login = () => {
   const [intPassword, setIntPassword] = useState("")
 
   const validarUser = async (e) => {
-   
+    
     try {
-
+      
       e.preventDefault()
+      
       const data = await Get()
+      
       data.forEach(datos => {
+       
         if (intEmail === datos.email && intPassword === datos.password) {
           console.log("hola")
           window.location.href = ("./Home")
           return alert("Bienvenido")
+        } else if(!intEmail === !datos.email && !intPassword === !datos.password){
+          return alert("usuario incorrecto")
         } 
 
-        if(!intEmail === !datos.email && !intPassword === !datos.password){
-          return alert("error")
-        } 
-        
         if(intEmail===("") || intPassword===("")){
           return alert("ingrese texto en los espacios")
         } else("Prueba")

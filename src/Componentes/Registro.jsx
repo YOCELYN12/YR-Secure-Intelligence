@@ -27,6 +27,9 @@ const Registro = () => {
       password: intPassword,
       estado: estado
     }
+    if (intName==("")|| intName==("")|| intPassword("")){
+      return alert("ingrese texto en los espacios vacios")
+    }
     await Post(datos)
   }
 
