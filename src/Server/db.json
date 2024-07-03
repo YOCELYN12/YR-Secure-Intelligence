@@ -13,20 +13,41 @@
       "password": "EFFEF"
     }
   ],
-
   "productos": [
     {
       "id": "1",
       "producto": "Mouse",
       "precio": "2000",
-      "marca":"PATITO"
+      "marca": "PATITO",
+      "descripcion": "Accesorio para la computadora"
     },
-
     {
       "id": "2",
       "producto": " Audifonos",
       "precio": "jane@example.com",
-      "marca": "patito"
+      "marca": "patito",
+      "descripcion": "Accesorio para la computadora"
+    },
+    {
+      "id": "94e7",
+      "producto": "PRUEBA",
+      "precio": "2000",
+      "marca": "PRUEBA",
+      "descripcion": "NCMNCMNCCN"
+    },
+    {
+      "id": "3773",
+      "producto": "",
+      "precio": "",
+      "marca": "",
+      "descripcion": ""
+    },
+    {
+      "id": "2c40",
+      "producto": "",
+      "precio": "",
+      "marca": "",
+      "descripcion": ""
     }
   ]
 }
