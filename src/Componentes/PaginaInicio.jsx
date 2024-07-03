@@ -33,17 +33,62 @@ function PaginaInicio() {
       </header>
 
 
+      {/* 
+      <div className='slider-frame'>
+
+        <ul>
+
+          <li>
+
+            <img src="src/img/Prueba/prueba2.jpg" alt="" />
+            <div className='texto'>
+              <h2>Prueba1</h2>
+              <p>Somos su mejor opcion</p>
+            </div>
+
+          </li>
+
+          <li>
+
+            <img src="src/img/Prueba/prueba1.jpg" alt="" />
+            <div className='texto'>
+              <h2>Prueba2</h2>
+              <p>Somos su mejor opcion</p>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div> */}
 
 
       <div className='contenedor' >
         <h1 className='bienvenido'>Bienvenido</h1>
-        <button onClick={() => { navegar("/Registro") }}>Registro</button>
-        <button onClick={() => { navegar("/Login") }}>Login</button>
       </div>
 
+      <div className='registro'>
+
+        <img src="src/img/Compu.jpg" alt="" />
+        <div className='texto'>
+          <button onClick={() => { navegar("/Registro") }}>Registro</button>
+          <p>Prueba para poner el texto dentro de la imagen</p>
+        </div>
+
+      </div>
+
+      <div className='Login'>
+
+        <img src="src/img/Compu2.jpg" alt="" />
+        <div className='text-img2'>
+          <button onClick={() => { navegar("/Login") }}>Login</button>
+          <p>Prueba para poner el texto dentro de la imagen</p>
+        </div>
+
+      </div>
 
       <div className='container-footer'>
-        
+
         <footer className='footer'>
 
           <div className='container'>

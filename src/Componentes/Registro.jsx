@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Post } from '../Fetch/Fetch'
 import Login from './Login'
+import Validaciones from './Validaciones'
 
 
 const Registro = () => {
@@ -20,25 +21,30 @@ const Registro = () => {
   const registrarse = async (e) => {
     e.preventDefault()
     let datos = {
-      nombre:intName,
-      email:intEmail,
-      password:intPassword,
+      nombre: intName,
+      email: intEmail,
+      password: intPassword,
       estado: estado
     }
     await Post(datos)
   }
 
+
+  
+
   return (
-    
-    <div  className='body'>
+
+    <div className='body'>
 
       <h1>Registro</h1>
-      <input type="text" placeholder='NAME' value={intName} onChange={(e) => setIntName(e.target.value)}/> {/*input para poder agregar el name a la API*/ }
-      <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e)=> setIntEmail(e.target.value)}/> {/*input para poder agregar el email  a la API*/ }
-      <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/ }
+      <form action="" onSubmit={handleSubmit}>
 
-      <button onClick={()=> {navegar("/Login")}} >Login</button>
-      <button onClick={()=> (navegar("/PaginaInicio"))}>Pagina inicio</button>
+        <input type="text" placeholder='NAME' value={intName}  onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
+        <input type="text" placeholder='EMAIL' value={intEmail}  onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
+        <input type="text" placeholder='PASSWORD' value={intPassword}  onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
+      </form>
+      <button onClick={() => { navegar("/Login") }} >Login</button>
+      <button onClick={() => (navegar("/PaginaInicio"))}>Pagina inicio</button>
       <button onClick={registrarse}>Registrarse</button>
 
     </div>
