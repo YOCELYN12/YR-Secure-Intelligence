@@ -4,7 +4,7 @@ import "./Home.css"
 const Home = () => {
   return (
     <div>
-      
+
       <header className='header-home'>
 
         <div className='logo'>
@@ -52,7 +52,9 @@ const Home = () => {
 
               <div className='footer-links'>
 
-                <h4>Ayuda</h4>
+                <div id='prueba'>
+                  <h4>Ayuda</h4>
+                </div>
                 <ul>
                   <li><a href="#">Preguntas</a></li>
                   <li><a href="#">Compras</a></li>

@@ -1,9 +1,6 @@
 import React from 'react'
 
-const Validaciones = () => {
-
-   
-     
+const Catalogo = () => {
   return (
     <div>
       
@@ -11,4 +8,4 @@ const Validaciones = () => {
   )
 }
 
-export default Validaciones
+export default Catalogo

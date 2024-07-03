@@ -11,6 +11,7 @@ function PaginaInicio() {
   return (
     <>
 
+
       <header className='header'>
 
         <div className='logo'>
@@ -21,9 +22,9 @@ function PaginaInicio() {
 
           <ul className='nav-links'>
 
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="./Home">Services</a></li>
+            <li><a href="./Home">Projects</a></li>
+            <li><a href="./Catalogo">Productos</a></li>
 
           </ul>
 
@@ -33,59 +34,69 @@ function PaginaInicio() {
       </header>
 
 
-      {/* 
-      <div className='slider-frame'>
-
-        <ul>
-
-          <li>
-
-            <img src="src/img/Prueba/prueba2.jpg" alt="" />
-            <div className='texto'>
-              <h2>Prueba1</h2>
-              <p>Somos su mejor opcion</p>
-            </div>
-
-          </li>
-
-          <li>
-
-            <img src="src/img/Prueba/prueba1.jpg" alt="" />
-            <div className='texto'>
-              <h2>Prueba2</h2>
-              <p>Somos su mejor opcion</p>
-            </div>
-
-          </li>
-
-        </ul>
-
-      </div> */}
 
 
-      <div className='contenedor' >
-        <h1 className='bienvenido'>Bienvenido</h1>
+      <div className='container-button'>
+        <h1>Bienvenido somos TechSolution</h1>
+        <button className='button-registro' onClick={() => { navegar("/Registro") }}>Registro</button>
+        <button className='button-login' onClick={() => { navegar("/Login") }}> Login</button>
       </div>
 
-      <div className='registro'>
 
-        <img src="src/img/Compu.jpg" alt="" />
-        <div className='texto'>
-          <button onClick={() => { navegar("/Registro") }}>Registro</button>
-          <p>Prueba para poner el texto dentro de la imagen</p>
+      <img className='contac' src="src/img/login2.png" alt="" />
+
+
+      <div className='identidad'>
+        <div>
+          <p>Quienes somos:
+            líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
+            En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
+            que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
+            integral de los datos y sistemas de nuestros clientes.
+          </p>
         </div>
+      </div>
+
+
+      <div className='contenedor-foto'>
+
+        <figure>
+
+
+          <div className='capa'>
+
+            <p>Nuestro equipo de expertos no solo desarrolla <br />
+              aplicativos web y APIs robustos y eficientes, sino que también los fortalece <br />
+              con capas de protección casi impenetrables. Cada línea de código está diseñada <br />
+              para resistir ataques y asegurar la integridad de tus datos y sistemas.</p>
+
+
+          </div>
+
+        </figure>
 
       </div>
 
-      <div className='Login'>
 
-        <img src="src/img/Compu2.jpg" alt="" />
-        <div className='text-img2'>
-          <button onClick={() => { navegar("/Login") }}>Login</button>
-          <p>Prueba para poner el texto dentro de la imagen</p>
-        </div>
 
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div className='container-footer'>
 
