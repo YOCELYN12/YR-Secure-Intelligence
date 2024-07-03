@@ -41,6 +41,27 @@ function PaginaInicio() {
         <button className='button-registro' onClick={() => { navegar("/Registro") }}>Registro</button>
         <button className='button-login' onClick={() => { navegar("/Login") }}> Login</button>
       </div>
+      <div className='contenedor-foto'>
+
+<figure>
+
+
+  <div className='capa'>
+
+    <p >Quienes somos:
+      líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
+      En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
+      que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
+      integral de los datos y sistemas de nuestros clientes.
+
+    </p>
+
+
+  </div>
+
+</figure>
+
+</div>
 
 
       <img className='contac' src="src/img/login2.png" alt="" />
@@ -48,35 +69,17 @@ function PaginaInicio() {
 
       <div className='identidad'>
         <div>
-          <p>Quienes somos:
-            líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
-            En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
-            que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
-            integral de los datos y sistemas de nuestros clientes.
+          <p className='parrafo'>
+            Nuestro equipo de expertos no solo desarrolla <br />
+            aplicativos web y APIs robustos y eficientes, sino que también los fortalece <br />
+            con capas de protección casi impenetrables. Cada línea de código está diseñada <br />
+            para resistir ataques y asegurar la integridad de tus datos y sistemas.
           </p>
         </div>
       </div>
 
 
-      <div className='contenedor-foto'>
-
-        <figure>
-
-
-          <div className='capa'>
-
-            <p>Nuestro equipo de expertos no solo desarrolla <br />
-              aplicativos web y APIs robustos y eficientes, sino que también los fortalece <br />
-              con capas de protección casi impenetrables. Cada línea de código está diseñada <br />
-              para resistir ataques y asegurar la integridad de tus datos y sistemas.</p>
-
-
-          </div>
-
-        </figure>
-
-      </div>
-
+     
 
 
 

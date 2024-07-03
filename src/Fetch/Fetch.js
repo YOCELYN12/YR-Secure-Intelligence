@@ -1,4 +1,4 @@
-const URL =  "http://localhost:3001/api/task/"
+const URL =  "http://localhost:3001/db.json"
 
 //Get
 const Get = async()=>{
