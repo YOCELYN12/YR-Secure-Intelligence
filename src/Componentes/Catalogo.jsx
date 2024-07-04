@@ -1,8 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Post } from '../Fetch/Fetch'
 import { set } from 'react-hook-form'
 import { Delete } from '../Fetch/Fetch'
+import Productos from './Productos'
+import ListaProductos from './ListaProductos'
+import { Get } from '../Fetch/Fetch'
 
 const Catalogo = () => {
 
@@ -12,10 +15,11 @@ const Catalogo = () => {
   const [intDescripcion, setIntDescripcion] = useState("")
   const [intUnidades, setIntUnidades] = useState("")
 
-  
+
+  const [prod, setProd] = useState([])
 
 
-//Evento del boton para poder ingresar los datos a la API 
+  //Evento del boton para poder ingresar los datos a la API 
   const ingresarproducto = async (e) => {
     e.preventDefault()
     let datos = {
@@ -29,6 +33,14 @@ const Catalogo = () => {
     await Post(datos, "productos")
   }
 
+  useEffect(() => {
+    const mostrarProducto = async () => {
+      const data = await Get("productos")
+      setProd(data)
+    }
+    mostrarProducto()
+
+  }, [prod])
 
 
   return (
@@ -62,13 +74,18 @@ const Catalogo = () => {
         <input type="text" value={intMarca} onChange={(e) => setIntMarca(e.target.value)} placeholder='marca' />
         <input type="number" value={intPrecio} onChange={(e) => setIntePrecio(e.target.value)} placeholder='precio' />
         <input type="texto" value={intDescripcion} onChange={(e) => setIntDescripcion(e.target.value)} placeholder='descripcion del producto' />
-        <input type="number" value={intUnidades} onChange={(e) => setIntUnidades (e.target.value)} placeholder='unidades disponibles'/>
+        <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles' />
 
 
         <button onClick={ingresarproducto}>Ingresar producto</button>
+
+
       </div>
 
-      
+
+      <ListaProductos productosAPI={prod} />
+
+
       <div className='container-footer'>
 
         <footer className='footer'>
