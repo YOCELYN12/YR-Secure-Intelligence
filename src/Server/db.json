@@ -17,39 +17,23 @@
       "nombre": "EFEFFE",
       "email": "FEEFEF",
       "password": "EFFEF"
+    },
+    {
+      "id": "2057",
+      "nombre": "yocelyn",
+      "email": "yocelynrivera9@gmail.com",
+      "password": "1234"
+      
     }
   ],
   "productos": [
     {
-      "id": "1",
-      "producto": "Mouse",
-      "precio": "2000",
-      "marca": "PATITO",
-      "descripcion": "Accesorio para la computadora",
+      "id": "3",
+      "producto": "mmm",
+      "precio": "llp",
+      "marca": "lll",
+      "descripcion": "jjjj",
       "unidades": "4"
-    },
-    {
-      "id": "2",
-      "producto": " Audifonos",
-      "precio": "jane@example.com",
-      "marca": "patito",
-      "descripcion": "Accesorio para la computadora",
-      "unidades": "4"
-    },
-    {
-      "id": "94e7",
-      "producto": "PRUEBA",
-      "precio": "2000",
-      "marca": "PRUEBA",
-      "descripcion": "NCMNCMNCCN"
-    },
-    {
-      "id": "f92d",
-      "producto": "hhh",
-      "precio": "333",
-      "marca": "fff",
-      "descripcion": "vvvv",
-      "unidades": "33"
     }
   ]
 }

@@ -2,48 +2,54 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import PaginaInicio from './Componentes/PaginaInicio.jsx'
 import {RouterProvider ,createBrowserRouter } from 'react-router-dom'
-import Home from './Componentes/Home.jsx'
-import Login from './Componentes/Login.jsx'
-import Registro from './Componentes/Registro.jsx'
 import Contacto from './Componentes/Contacto.jsx'
-import Catalogo from './Componentes/Catalogo.jsx'
+import LoginPagina from './Pages/LoginPagina.jsx'
+import PaginaPrincipal from './Pages/PaginaPrincipal.jsx'
+import RegistroPagina from './Pages/RegistroPagina.jsx'
+import ListaProductos from './Componentes/ListaProductos.jsx'
+import InventarioCatalogo from './Componentes/InventarioCatalogo.jsx'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PaginaInicio/>
+    element: <PaginaPrincipal/>
   },
 
   {
-    path: "/Home",
-    element: <Home/>
+    path: "/RegistroPagina",
+    element: <RegistroPagina/>
   },
 
   {
-    path: "/Registro",
-    element: <Registro/>
+    path: "/LoginPagina",
+    element:<LoginPagina/>
   },
 
   {
-    path: "/Login",
-    element: <Login/>
+    path:"ListaProductos",
+    element:<ListaProductos/>
   },
 
   {
-    path: "PaginaInicio",
-    element: <PaginaInicio/>
+    path: "/Catalogo",
+    element: <Catalogo/>
   },
-
   {
     path:"Contacto",
-    element:<Contacto/>
+    element: <Contacto/>
+
   },
-  
+
   {
-    path: "Catalogo",
-    element : <Catalogo/>
+    path:"PaginaPrincipal",
+    element: <PaginaPrincipal/>
+  },
+
+  {
+    path:"InventarioCatalogo",
+    element: <InventarioCatalogo/>
   }
 
 ])

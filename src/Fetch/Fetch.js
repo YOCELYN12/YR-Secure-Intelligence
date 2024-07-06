@@ -9,6 +9,7 @@ const Get = async(endpoint)=>{
     } catch (error) {
         console.log(error)
     }
+    
 }
 
 export {Get}
@@ -16,19 +17,14 @@ export {Get}
 //Delete
 const Delete = async (id,endpoint)=>{
     try {
-        const eliminar = await fetch(URL+id+endpoint, {
+        const eliminar = await fetch(URL+endpoint+id, {
             method: "DELETE",
-        headers: {
-            "Content-Type": "application/json"
-        }
         })
         const salida = await eliminar.json()
-
         if (eliminar.ok){
             alert("Se elimino exitosamente")
-            await Get()
         }else {
-            alert("Eror")
+            console.log("Eror")
         }
         console.log(salida)
 
@@ -80,4 +76,6 @@ const Put = async(id,estado,endpoint)=>{
         console.log(error )
     }
 }
+
+export {Put}
 

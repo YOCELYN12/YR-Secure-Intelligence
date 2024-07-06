@@ -12,56 +12,30 @@ function PaginaInicio() {
     <>
 
 
-      <header className='header'>
-
-        <div className='logo'>
-          <img src="src/img/LogoTech.png" alt="" />
-        </div>
-
-        <nav>
-
-          <ul className='nav-links'>
-
-            <li><a href="./Home">Services</a></li>
-            <li><a href="./Home">Projects</a></li>
-            <li><a href="./Catalogo">Productos</a></li>
-
-          </ul>
-
-        </nav>
-
-        <a href="./Contacto" className='btn'><button>Contactenos</button></a>
-      </header>
-
-
-
-
       <div className='container-button'>
         <h1>Bienvenido somos TechSolution</h1>
-        <button className='button-registro' onClick={() => { navegar("/Registro") }}>Registro</button>
-        <button className='button-login' onClick={() => { navegar("/Login") }}> Login</button>
+        <button className='button-registro' onClick={() => { navegar("/RegistroPagina") }}>Registro</button>
+        <button className='button-login' onClick={() => { navegar("/LoginPagina") }}> Login</button>
       </div>
+      
       <div className='contenedor-foto'>
+        <figure>
 
-<figure>
+          <div className='capa'>
 
+            <p >Quienes somos:
+              líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
+              En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
+              que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
+              integral de los datos y sistemas de nuestros clientes.
 
-  <div className='capa'>
+            </p>
 
-    <p >Quienes somos:
-      líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
-      En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
-      que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
-      integral de los datos y sistemas de nuestros clientes.
+          </div>
 
-    </p>
+        </figure>
 
-
-  </div>
-
-</figure>
-
-</div>
+      </div>
 
 
       <img className='contac' src="src/img/login2.png" alt="" />
@@ -78,67 +52,6 @@ function PaginaInicio() {
         </div>
       </div>
 
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className='container-footer'>
-
-        <footer className='footer'>
-
-          <div className='container'>
-
-            <div className='footer-row'>
-
-              <div className='footer-links'>
-
-                <h4>Empresa</h4>
-                <ul>
-
-                  <li><a href="#">Nosotos</a></li>
-                  <li><a href="#">Politica de privacidad</a></li>
-                  <li><a href="#">Afiliate</a></li>
-
-                </ul>
-
-              </div>
-
-
-              <div className='footer-links'>
-
-                <h4>Ayuda</h4>
-                <ul>
-                  <li><a href="#">Preguntas</a></li>
-                  <li><a href="#">Compras</a></li>
-                </ul>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </footer>
-      </div>
     </>
 
   )

@@ -1,33 +1,9 @@
 import React from 'react'
-import "./Home.css"
 
-const Home = () => {
+const Footer = () => {
   return (
     <div>
-
-      <header className='header-home'>
-
-        <div className='logo'>
-          <img src="src/img/LogoTech.png" alt="" />
-        </div>
-
-        <nav>
-
-          <ul className='nav-links'>
-
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Productos</a></li>
-
-          </ul>
-
-        </nav>
-
-        <a href="./Contacto" className='btn'><button>Contactenos</button></a>
-      </header>
-
-
-
+      
       <div className='container-footer-home'>
 
         <footer className='footer-home'>
@@ -41,7 +17,7 @@ const Home = () => {
                 <h4>Empresa</h4>
                 <ul>
 
-                  <li><a href="#">Nosotos</a></li>
+                  <li><a href="#">Nosotros</a></li>
                   <li><a href="#">Politica de privacidad</a></li>
                   <li><a href="#">Afiliate</a></li>
 
@@ -72,4 +48,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Footer

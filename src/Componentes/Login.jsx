@@ -37,82 +37,15 @@ const Login = () => {
   }
  
   return (
-
     <>
+     <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)}/>
+     <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword (e.target.value)} />
 
-      <header className='header'>
+     <button onClick={validarUser} >Logearse</button>
 
-        <div className='logo'>
-          <img src="src/img/LogoTech.png" alt="" />
-        </div>
-
-        <nav>
-
-          <ul className='nav-links'>
-
-            <li><a href="./Home">Services</a></li>
-            <li><a href="./Home">Projects</a></li>
-            <li><a href="./Catalogo">Productos</a></li>
-
-          </ul>
-
-        </nav>
-
-        <a href="./Contacto" className='btn'><button>Contactenos</button></a>
-      </header>
-      <div>
-        <h1>Login</h1>
-
-        <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} />
-        <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} />
-        <button onClick={validarUser}>Logearse</button>
-
-        <button onClick={() => (navegar("/Registro"))}>Registro</button>
-        <button onClick={() => (navegar("/PaginaInicio"))}>Pagina inicio</button>
-      </div>
-
-
-
-      <div className='container-footer'>
-
-        <footer className='footer'>
-
-          <div className='container'>
-
-            <div className='footer-row'>
-
-              <div className='footer-links'>
-
-                <h4>Empresa</h4>
-                <ul>
-
-                  <li><a href="#">Nosotos</a></li>
-                  <li><a href="#">Politica de privacidad</a></li>
-                  <li><a href="#">Afiliate</a></li>
-
-                </ul>
-
-              </div>
-
-
-              <div className='footer-links'>
-
-                <h4>Ayuda</h4>
-                <ul>
-                  <li><a href="#">Preguntas</a></li>
-                  <li><a href="#">Compras</a></li>
-                </ul>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </footer>
-      </div>
-
-
+     <button onClick={()=> {navegar ("/RegistroPagina")}}>Registro</button>
+     <button onClick={() => {navegar("/PaginaPrincipal")}} >Pagina principal</button>
+    =
     </>
   )
 }
