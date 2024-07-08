@@ -2,7 +2,7 @@ import React from 'react'
 import { Delete } from '../Fetch/Fetch'
 
 
-const Productos = ({producto,precio,marca,descripcion,unidades,eliminar}) => {
+const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar}) => {
     
 
   return (
@@ -15,7 +15,8 @@ const Productos = ({producto,precio,marca,descripcion,unidades,eliminar}) => {
       <span>Cantidad de unidades {unidades}</span>
 
       <button onClick={eliminar}>Eliminar</button>
-
+      <button onClick={editar}>Editar</button>
+  
     </div>
   )
 }

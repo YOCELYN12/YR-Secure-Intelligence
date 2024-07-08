@@ -41,6 +41,7 @@ const Registro = () => {
           <input type="text" placeholder='NAME' value={intName} onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
           <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
           <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
+          
         </form>
 
         <button onClick={() => { navegar("/LoginPagina") }} >Login</button>

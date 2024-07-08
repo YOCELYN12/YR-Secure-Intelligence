@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../Componentes/Header'
 import Footer from '../Componentes/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navegar = useNavigate()
+  
+
   return (
     <div>
       <Header/>
-      <h1>hola</h1>
+       <button onClick={()=> {navegar("/CatalogoProductos")}} > Catalogo</button>
       <Footer/>
     </div>
   )

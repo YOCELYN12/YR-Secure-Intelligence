@@ -40,9 +40,10 @@ const InventarioCatalogo = () => {
     }, [prod])
 
 
+  
+
     return (
         <>
-
             <div>
 
                 <input type="text" value={intProducto} onChange={(e) => setIntProducto(e.target.value)} placeholder='nombre del artirulo'/>
@@ -52,12 +53,12 @@ const InventarioCatalogo = () => {
                 <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles'/>
 
                 <button onClick={ingresarproducto}>Ingresar producto</button>
+                <ListaProductos productosAPI={prod} />
+             
+
+               
 
             </div>
-
-            <ListaProductos productosAPI={prod} />
-
-
         </>
     )
 }

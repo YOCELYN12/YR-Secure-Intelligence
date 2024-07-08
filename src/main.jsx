@@ -10,12 +10,13 @@ import ListaProductos from './Componentes/ListaProductos.jsx'
 import InventarioCatalogo from './Componentes/InventarioCatalogo.jsx'
 import PaginaPrincipal from './Pages/PaginaPrincipal.jsx'
 import Home from './Pages/Home.jsx'
+import CatalogoProductos from './Pages/CatalogoProductos.jsx'
 
 const router = createBrowserRouter([
-   {
-     path:"/",
-     element: <PaginaPrincipal/>
-   },
+  {
+    path:"/",
+    element: <PaginaPrincipal/>
+  },
 
   {
     path: "/RegistroPagina",
@@ -37,18 +38,26 @@ const router = createBrowserRouter([
     element: <Contacto/>
 
   },
+
   {
     path:"/InventarioCatalogo",
     element: <InventarioCatalogo/>
   },
+
   {
     path:"/Home",
     element:<Home/>
   },
+
   {
     path:"/PaginaPrincipal",
     element: <PaginaPrincipal/>
   },
+
+  {
+    path:"/CatalogoProductos",
+    element:<CatalogoProductos/>
+  }
 
 ])
 
