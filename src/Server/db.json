@@ -6,66 +6,7 @@
       "email": "john@example.com",
       "password": "2000"
     },
-    {
-      "id": "6504",
-      "name": "EFEFFE",
-      "email": "FEEFEF",
-      "password": "EFFEF"
-    },
-    {
-      "id": "7c4c",
-      "nombre": "EFEFFE",
-      "email": "FEEFEF",
-      "password": "EFFEF"
-    },
-    {
-      "id": "2057",
-      "nombre": "yocelyn",
-      "email": "yocelynrivera9@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "30f7",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "53a4",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "1738",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "fd59",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "4403",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "9cb2",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "9908",
-      "nombre": "",
-      "email": "",
-      "password": ""
-    },
+
     {
       "id": "9ac3",
       "nombre": "Nana",

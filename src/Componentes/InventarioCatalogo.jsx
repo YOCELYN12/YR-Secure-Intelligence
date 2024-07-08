@@ -6,19 +6,15 @@ import ListaProductos from './ListaProductos'
 import { Delete } from '../Fetch/Fetch'
 import { Get } from '../Fetch/Fetch'
 
-
 const InventarioCatalogo = () => {
 
-
-    const [intProducto, setIntProducto] = useState("")
+    const [intProducto, setIntProducto] = useState("") 
     const [intPrecio, setIntePrecio] = useState("")
     const [intMarca, setIntMarca] = useState("")
     const [intDescripcion, setIntDescripcion] = useState("")
     const [intUnidades, setIntUnidades] = useState("")
 
-
     const [prod, setProd] = useState([])
-
 
     //Evento del boton para poder ingresar los datos a la API 
     const ingresarproducto = async (e) => {

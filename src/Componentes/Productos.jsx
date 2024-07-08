@@ -1,6 +1,6 @@
 import React from 'react'
-import Catalogo from './Catalogo'
 import { Delete } from '../Fetch/Fetch'
+
 
 const Productos = ({producto,precio,marca,descripcion,unidades,eliminar}) => {
     
@@ -15,7 +15,6 @@ const Productos = ({producto,precio,marca,descripcion,unidades,eliminar}) => {
       <span>Cantidad de unidades {unidades}</span>
 
       <button onClick={eliminar}>Eliminar</button>
-
 
     </div>
   )

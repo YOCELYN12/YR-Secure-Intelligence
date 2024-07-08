@@ -1,16 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Login from './Login'
-import Registro from './Registro'
-import { Router } from 'react-router-dom'
-import "./PaginaInicio.css"
+import Header from './Header'
+import Footer from './Footer'
+import RegistroPagina from '../Pages/RegistroPagina'
+import LoginPagina from '../Pages/LoginPagina'
 
 function PaginaInicio() {
   const navegar = useNavigate()
 
   return (
     <>
-
 
       <div className='container-button'>
         <h1>Bienvenido somos TechSolution</h1>
@@ -28,7 +27,6 @@ function PaginaInicio() {
               En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
               que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
               integral de los datos y sistemas de nuestros clientes.
-
             </p>
 
           </div>
@@ -51,6 +49,7 @@ function PaginaInicio() {
           </p>
         </div>
       </div>
+
 
     </>
 

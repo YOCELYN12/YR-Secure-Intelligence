@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Post } from '../Fetch/Fetch'
 import { useForm } from 'react-hook-form'
-
+import "./EstilosGenerales.css"
 
 const Registro = () => {
   //Costante para el uso del Hook useNavigate
@@ -15,14 +15,18 @@ const Registro = () => {
 
   //evento del boton registrarse, para que en el momento que detecte un click se agreguen los datos en la API
   const registrarse = async (e) => {
-    e.preventDefault()
-    let datos = {
-      nombre: intName,
-      email: intEmail,
-      password: intPassword
+    if (intEmail === ("") || intPassword === ("")) {
+      alert("ingrese texto en los espacios")
+    } else if (intEmail === (intEmail) || intPassword === (intPassword)) {
+
+      e.preventDefault()
+      let datos = {
+        nombre: intName,
+        email: intEmail,
+        password: intPassword
+      }
+      await Post(datos, "users")
     }
-  
-    await Post(datos, "users")
   }
 
   return (
@@ -39,13 +43,12 @@ const Registro = () => {
           <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
         </form>
 
-        <button onClick={() => {navegar("/LoginPagina") }} >Login</button>
-        <button onClick={() => {navegar("/PaginaInicio")}}>Pagina inicio</button>
-        <button onClick={() => {navegar("/Catalogo")}}>Catalogo</button>
+        <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
+        <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
         <button onClick={registrarse}>Registrarse</button>
 
       </div>
-  
+
     </>
 
   )

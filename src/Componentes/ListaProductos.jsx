@@ -2,6 +2,7 @@ import React from 'react'
 import Productos from './Productos'
 import { Delete } from '../Fetch/Fetch'
 
+
 const ListaProductos = ({ productosAPI }) => {
 
     const deleteProducto = async (id) => {

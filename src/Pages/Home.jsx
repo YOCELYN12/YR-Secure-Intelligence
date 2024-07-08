@@ -1,16 +1,15 @@
 import React from 'react'
-import PaginaInicio from '../Componentes/PaginaInicio'
 import Header from '../Componentes/Header'
 import Footer from '../Componentes/Footer'
 
-const Paginaprincipal = () => {
+const Home = () => {
   return (
     <div>
       <Header/>
-      <PaginaInicio/>
+      <h1>hola</h1>
       <Footer/>
     </div>
   )
 }
 
-export default Paginaprincipal
+export default Home

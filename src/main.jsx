@@ -5,17 +5,17 @@ import './index.css'
 import {RouterProvider ,createBrowserRouter } from 'react-router-dom'
 import Contacto from './Componentes/Contacto.jsx'
 import LoginPagina from './Pages/LoginPagina.jsx'
-import PaginaPrincipal from './Pages/PaginaPrincipal.jsx'
 import RegistroPagina from './Pages/RegistroPagina.jsx'
 import ListaProductos from './Componentes/ListaProductos.jsx'
 import InventarioCatalogo from './Componentes/InventarioCatalogo.jsx'
-
+import PaginaPrincipal from './Pages/PaginaPrincipal.jsx'
+import Home from './Pages/Home.jsx'
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <PaginaPrincipal/>
-  },
+   {
+     path:"/",
+     element: <PaginaPrincipal/>
+   },
 
   {
     path: "/RegistroPagina",
@@ -28,29 +28,27 @@ const router = createBrowserRouter([
   },
 
   {
-    path:"ListaProductos",
+    path:"/ListaProductos",
     element:<ListaProductos/>
   },
 
   {
-    path: "/Catalogo",
-    element: <Catalogo/>
-  },
-  {
-    path:"Contacto",
+    path:"/Contacto",
     element: <Contacto/>
 
   },
-
   {
-    path:"PaginaPrincipal",
+    path:"/InventarioCatalogo",
+    element: <InventarioCatalogo/>
+  },
+  {
+    path:"/Home",
+    element:<Home/>
+  },
+  {
+    path:"/PaginaPrincipal",
     element: <PaginaPrincipal/>
   },
-
-  {
-    path:"InventarioCatalogo",
-    element: <InventarioCatalogo/>
-  }
 
 ])
 
