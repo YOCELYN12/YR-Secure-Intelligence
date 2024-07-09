@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Delete } from '../Fetch/Fetch'
+import FormularioEditar from './FormularioEditar'
 
 
 const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar}) => {
+
+
+  const [mostrar,setMostrar] = useState(false)
+
+  const editarProducto = async (e)=>{
+    setMostrar (true)
     
+
+  }
 
   return (
     <div>
@@ -15,7 +24,11 @@ const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar})
       <span>Cantidad de unidades {unidades}</span>
 
       <button onClick={eliminar}>Eliminar</button>
-      <button onClick={editar}>Editar</button>
+      <button onClick={editarProducto} >Editar</button>
+      {mostrar && <FormularioEditar/>}
+
+
+ 
   
     </div>
   )

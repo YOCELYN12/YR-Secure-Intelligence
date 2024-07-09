@@ -8,6 +8,7 @@ const CatalogoProductos = () => {
   return (
     <div>
       <Header/>
+      <InventarioCatalogo/>
       <h3>Hola</h3>
       <Footer/>
     </div>

@@ -6,6 +6,8 @@ import ListaProductos from './ListaProductos'
 import { Delete } from '../Fetch/Fetch'
 import { Get } from '../Fetch/Fetch'
 
+
+
 const InventarioCatalogo = () => {
 
     const [intProducto, setIntProducto] = useState("") 
@@ -39,9 +41,7 @@ const InventarioCatalogo = () => {
 
     }, [prod])
 
-
-  
-
+   
     return (
         <>
             <div>
@@ -52,11 +52,8 @@ const InventarioCatalogo = () => {
                 <input type="texto" value={intDescripcion} onChange={(e) => setIntDescripcion(e.target.value)} placeholder='descripcion del producto'/>
                 <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles'/>
 
-                <button onClick={ingresarproducto}>Ingresar producto</button>
+                <button onClick={ingresarproducto}>Ingresar producto</button>               
                 <ListaProductos productosAPI={prod} />
-             
-
-               
 
             </div>
         </>

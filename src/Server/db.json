@@ -6,7 +6,6 @@
       "email": "john@example.com",
       "password": "2000"
     },
-
     {
       "id": "9ac3",
       "nombre": "Nana",
@@ -16,12 +15,12 @@
   ],
   "productos": [
     {
-      "id": "3",
-      "producto": "mmm",
-      "precio": "llp",
-      "marca": "lll",
-      "descripcion": "jjjj",
-      "unidades": "4"
+      "id": "5113",
+      "producto": "vvvvv",
+      "precio": "4",
+      "marca": "ffffff",
+      "descripcion": "llllll",
+      "unidades": "-3"
     }
   ]
 }

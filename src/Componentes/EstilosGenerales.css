@@ -208,3 +208,10 @@
     position: absolute;
     top: 50%;
 }
+.contenedorEditar{
+    display: grid;
+    justify-content: center;
+}
+.inpEditar{
+    width: 200px;
+}
