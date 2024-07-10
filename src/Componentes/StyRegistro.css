@@ -1,0 +1,14 @@
+.contenedor-register{
+    
+    display: grid;
+    grid-template-columns: 200px ;
+    width: 1380px;
+    height: 480px;
+    margin-top: 4%;
+    margin-left: -2%;
+    background-image: rgba(5,7,12.0.30) url(/src/Img/slide.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}

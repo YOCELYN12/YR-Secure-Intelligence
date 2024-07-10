@@ -26,7 +26,7 @@ const ListaProductos = ({ productosAPI,editarBTN }) => {
                         deleteProducto(produc.id)
                     }}
                     
-                    
+            
 
                 />
 

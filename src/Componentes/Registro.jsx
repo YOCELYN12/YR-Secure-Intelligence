@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { Post } from '../Fetch/Fetch'
 import { useForm } from 'react-hook-form'
 import "./EstilosGenerales.css"
-import './StyRegistro.css'
+import "./StyRegistro.css"
+
+
 const Registro = () => {
   //Costante para el uso del Hook useNavigate
   const navegar = useNavigate()
@@ -33,10 +35,10 @@ const Registro = () => {
     <>
 
       <div className='body'>
-        
-      <div>
-        
-        <h1>Registro</h1>
+
+        <div className='contenedor-register'>
+
+          <h1>Registro</h1>
 
           <form action="">
 
@@ -44,12 +46,14 @@ const Registro = () => {
             <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
             <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
 
+
+            <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
+            <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
+            <button onClick={registrarse}>Registrarse</button>
           </form>
         </div>
 
-        <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
-        <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
-        <button onClick={registrarse}>Registrarse</button>
+
 
       </div>
 

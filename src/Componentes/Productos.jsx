@@ -7,6 +7,7 @@ const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar})
 
   const [mostrar,setMostrar] = useState(false)
   const [id,setID]=useState()
+  
   const editarProducto = (id)=>{
     setMostrar (true)
     setID(id)
