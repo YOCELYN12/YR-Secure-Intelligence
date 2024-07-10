@@ -15,12 +15,32 @@
   ],
   "productos": [
     {
-      "id": "5bce",
-      "producto": "FFFF",
-      "precio": "-5",
-      "marca": "FFFFF",
-      "descripcion": "VGG",
-      "unidades": "-2"
+      "id": "3cd7",
+      "producto": "",
+      "precio": "",
+      "marca": "",
+      "descripcion": "",
+      "unidades": ""
+    },
+    {
+      "id": "adfb",
+      "producto": "",
+      "precio": "",
+      "marca": "",
+      "descripcion": "",
+      "unidades": ""
+    },
+    {
+      "id": "abd2"
+    },
+    {
+      "id": "aa15",
+      "producto": "hhghg",
+      "marca": "khkh"
+    },
+    {
+      "id": "4a97",
+      "producto": "hola"
     }
   ]
 }

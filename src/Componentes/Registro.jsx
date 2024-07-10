@@ -4,7 +4,7 @@ import { Post } from '../Fetch/Fetch'
 import { useForm } from 'react-hook-form'
 import "./EstilosGenerales.css"
 import "./StyRegistro.css"
-
+import Cards from './Cards'
 
 const Registro = () => {
   //Costante para el uso del Hook useNavigate
@@ -30,6 +30,10 @@ const Registro = () => {
       await Post(datos, "users")
     }
   }
+  
+
+  
+
 
   return (
     <>
@@ -38,19 +42,24 @@ const Registro = () => {
 
         <div className='contenedor-register'>
 
-          <h1>Registro</h1>
+          
+            <h1>Registro</h1>
 
-          <form action="">
+            <form action="">
 
-            <input type="text" placeholder='NAME' value={intName} onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
-            <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
-            <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
+              <input className='Int' type="text" placeholder='NAME' value={intName} onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
+              <input className='Int' type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
+              <input className='Int' type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
 
 
-            <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
-            <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
-            <button onClick={registrarse}>Registrarse</button>
-          </form>
+              <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
+              <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
+              <button onClick={registrarse}>Registrarse</button>
+              
+            </form>
+          <Cards/>
+          
+
         </div>
 
 

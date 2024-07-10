@@ -58,7 +58,7 @@
     list-style: none;
     text-transform: capitalize;
     position: relative;
-    top: 580px;
+    top: 460px;
     left: -38px;
     width: 105.5%;
 }
@@ -214,4 +214,18 @@
 }
 .inpEditar{
     width: 200px;
+}
+
+.contenedor-card{
+    background-color: blue;
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+}
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

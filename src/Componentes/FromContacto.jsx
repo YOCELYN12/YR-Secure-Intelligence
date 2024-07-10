@@ -1,92 +1,94 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com';
 
-const fromContacto = () => {
-    const [fromDatos,setFromDatos] = useState({
-        name:'',
-        email:"",
-        phone:'',
-        company:"",
-        subject:'',
-        message:""
+const FromContacto = () => {
+  const [fromDatos, setFromDatos] = useState({
+    name: '',
+    email: "",
+    phone: '',
+    company: "",
+    subject: '',
+    message: ""
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFromDatos({
+      fromDatos,
+      [name]: value,
+
     })
+  }
 
-    const handleChange = (e)=>{
-        const{name,value} =e.target
-        setFromDatos({
-            fromDatos,
-            [name]: value,
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const templateParams = {
+      from_name: fromDatos.name,
+      from_email: fromDatos.email,
+      phone: fromDatos.phone,
+      company: fromDatos.company,
+      subject: fromDatos.subject,
+      message: fromDatos.message,
+    };
 
-        })
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const templateParams = {
-            from_name: fromDatos.name,
-            from_email: fromDatos.email,
-            phone: fromDatos.phone,
-            company: fromDatos.company,
-            subject: fromDatos.subject,
-            message: fromDatos.message,
-          };
-      
-          emailjs.send('service_hsyfrc4 ', 'your_template_id', templateParams, 'your_user_id')
-            .then((response) => {
-              console.log('Correo enviado!', response.status, response.text);
-            })
-            .catch((error) => {
-              console.error('Error al enviar el correo:', error);
-            });
-    }
+    emailjs.send('service_hsyfrc4 ', 'your_template_id', templateParams, 'your_user_id')
+      .then((response) => {
+        console.log('Correo enviado!', response.status, response.text);
+      })
+      .catch((error) => {
+        console.error('Error al enviar el correo:', error);
+      });
+  }
 
 
   return (
     <div>
 
-        <form onSubmit={handleSubmit}>
-            <label >
-                Nombre:
-                <input type="text" name='name' value={fromDatos.name} onChange={handleChange} required/>
-            </label>
+      <h3>HOLA</h3>
 
-            <br />
+      <form onSubmit={handleSubmit}>
+        <label >
+          Nombre:
+          <input type="text" name='name' value={fromDatos.name} onChange={handleChange} required />
+        </label>
 
-            <label>
-                Email:
-                <input type="email" value={fromDatos.email} onChange={handleChange} required/>
-            </label>
+        <br />
 
-            <br />
+        <label>
+          Email:
+          <input type="email" value={fromDatos.email} onChange={handleChange} required />
+        </label>
 
-            <label>
-                Telefono:
-                <input type="text" name='phone' value={fromDatos.phone} onChange={handleChange} required />
-            </label>
+        <br />
 
-
-            <br />
-            
-            <label> 
-                Empresa:
-                <input type="text" name='company' value={fromDatos.company} onChange={handleChange} required />
-            </label>
-
-            <br />
-             
-             <label>
-                Asunto:
-                <input type="text" name='subject' value={fromDatos.message} onChange={handleChange} required/>
-             </label>
-
-             <br />
-             <button type='submit'>Enviar</button>
+        <label>
+          Telefono:
+          <input type="text" name='phone' value={fromDatos.phone} onChange={handleChange} required />
+        </label>
 
 
-        </form>
+        <br />
+
+        <label>
+          Empresa:
+          <input type="text" name='company' value={fromDatos.company} onChange={handleChange} required />
+        </label>
+
+        <br />
+
+        <label>
+          Asunto:
+          <input type="text" name='subject' value={fromDatos.message} onChange={handleChange} required />
+        </label>
+
+        <br />
+        <button type='submit'>Enviar</button>
+
+
+      </form>
       <h3>Hola</h3>
     </div>
   )
 }
 
-export default fromContacto
+export default FromContacto

@@ -4,7 +4,9 @@ import InventarioCatalogo from '../Componentes/InventarioCatalogo'
 import Header from '../Componentes/Header'
 import Footer from '../Componentes/Footer'
 
+
 const CatalogoProductos = () => {
+  
   return (
     <div>
       <Header/>

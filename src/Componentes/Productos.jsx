@@ -1,21 +1,17 @@
 import React, { useState } from 'react'
 import { Delete } from '../Fetch/Fetch'
 import FormularioEditar from './FormularioEditar'
+import ListaProductos from './ListaProductos'
 
 
-const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar}) => {
+const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editarProducto}) => {
 
   const [mostrar,setMostrar] = useState(false)
-  const [id,setID]=useState()
   
-  const editarProducto = (id)=>{
-    setMostrar (true)
-    setID(id)
-    console.log(id);
-  }
+ 
 
   return (
-    <div>
+    <div className='contenedor-card'>
 
       <h3>Nombre del producto{producto}</h3>
       <h3>Precio del producto{precio}</h3>

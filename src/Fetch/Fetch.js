@@ -59,6 +59,7 @@ export {Post}
 
 //Put
 const Put = async(estado,endpoint)=>{
+
     try {
     
         const answer = await fetch (URL+endpoint+"/"+estado.id,{

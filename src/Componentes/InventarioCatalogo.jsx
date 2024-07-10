@@ -6,7 +6,7 @@ import ListaProductos from './ListaProductos'
 import { Delete } from '../Fetch/Fetch'
 import { Get } from '../Fetch/Fetch'
 import FormularioEditar from './FormularioEditar'
-
+import { Put } from '../Fetch/Fetch'
 
 
 const InventarioCatalogo = () => {
@@ -41,8 +41,16 @@ const InventarioCatalogo = () => {
     const [descripcion, setDescripcion] = useState()
     const [unidades, setUnidades] = useState()
 
+    useEffect(()=>{
+        const obtenerDatos=async()=>{
+            const getDatos = await Get("productos")
+            setProd(getDatos)
+        }
+        obtenerDatos()
+    },[])
+
    //Funcion para el boton Editar, y que aparezca las opciones editables. 
-    const validarPut = async () => {
+   const validarPut = async (id) => {
         let actualizarDatos = {
             id:id,
             producto: producto,
@@ -51,12 +59,13 @@ const InventarioCatalogo = () => {
             descripcion: descripcion,
             unidades: unidades
         }
-        await Put(actualizarDatos, "productos")
+            
+        await Put(actualizarDatos,"productos")
     }
 
     return (
         <>
-            <div>
+            <div className='Base'>
 
                 <input type="text" value={intProducto} onChange={(e) => setIntProducto(e.target.value)} placeholder='nombre del artirulo' />
                 <input type="text" value={intMarca} onChange={(e) => setIntMarca(e.target.value)} placeholder='marca' />
@@ -65,21 +74,15 @@ const InventarioCatalogo = () => {
                 <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles' />
 
                 <button onClick={ingresarproducto}>Ingresar producto</button>
-                <ListaProductos productosAPI={prod} />
-
-
-                <div className='contenedorEditar'>
-
-                    <input className='inpEditar' type="text" onChange={(e) => setProducto(e.target.value)} placeholder='producto' />
-                    <input className='inpEditar' type="number" onChange={(e) => setPrecio(e.target.value)} placeholder='precio' />
-                    <input className='inpEditar' type="text" onChange={(e) => setMarca(e.target.value)} placeholder='marca' />
-                    <input className='inpEditar' type="text" onChange={(e) => setDescripcion(e.target.value)} placeholder='descripcion' />
-                    <input className='inpEditar' type="number" onChange={(e) => setUnidades(e.target.value)} placeholder='unidades' />
-
-                </div>
-
-                <button onClick={validarPut}>Editar Producto</button>
-
+                <ListaProductos productosAPI={prod} editarBTN={validarPut} />
+                
+            {/* FORMULARIO EDITAR */}
+            
+            <input type="text"  onChange={(e) => setProducto(e.target.value)} placeholder='nombre del artirulo' />
+                <input type="text"  onChange={(e) => setMarca(e.target.value)} placeholder='marca' />
+                <input type="number"  onChange={(e) => setPrecio(e.target.value)} placeholder='precio' />
+                <input type="texto"  onChange={(e) => setDescripcion(e.target.value)} placeholder='descripcion del producto' />
+                <input type="number"  onChange={(e) => setUnidades(e.target.value)} placeholder='unidades disponibles' />
             </div>
         </>
     )

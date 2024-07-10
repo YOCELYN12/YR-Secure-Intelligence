@@ -10,27 +10,28 @@ const ListaProductos = ({ productosAPI,editarBTN }) => {
     }
 
     return (
-        <div>
+        <div className='centrar'>
+            <div className='contenedor-productos'>
             {productosAPI.map((produc, index) => (
 
                 <Productos
-
                     key={index}
                     producto={produc.producto}
                     precio={produc.precio}
                     marca={produc.marca}
                     descripcion={produc.descripcion}
                     unidades={produc.unidades}
-
                     eliminar={() => {
                         deleteProducto(produc.id)
                     }}
+                    editarProducto={()=>editarBTN(produc.id)}
                     
             
 
                 />
 
             ))}
+        </div>
         </div>
     )
 }
