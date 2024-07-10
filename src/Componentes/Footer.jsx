@@ -19,7 +19,7 @@ const Footer = () => {
                 
                 <ul>
 
-                  <li><a href="#">Nosotros</a></li>
+                  <li><a href="./Contacto">Nosotros</a></li>
                   <li><a href="#">Politica de privacidad</a></li>
                   <li><a href="#">Afiliate</a></li>
 
