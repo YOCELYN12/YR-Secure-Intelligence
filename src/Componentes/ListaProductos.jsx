@@ -3,7 +3,7 @@ import Productos from './Productos'
 import { Delete } from '../Fetch/Fetch'
 
 
-const ListaProductos = ({ productosAPI }) => {
+const ListaProductos = ({ productosAPI,editarBTN }) => {
 
     const deleteProducto = async (id) => {
         await Delete(id,"productos/")
@@ -21,10 +21,12 @@ const ListaProductos = ({ productosAPI }) => {
                     marca={produc.marca}
                     descripcion={produc.descripcion}
                     unidades={produc.unidades}
-                    
+
                     eliminar={() => {
                         deleteProducto(produc.id)
                     }}
+                    
+                    
 
                 />
 

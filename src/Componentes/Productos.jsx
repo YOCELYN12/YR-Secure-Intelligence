@@ -5,13 +5,12 @@ import FormularioEditar from './FormularioEditar'
 
 const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar}) => {
 
-
   const [mostrar,setMostrar] = useState(false)
-
-  const editarProducto = async (e)=>{
+  const [id,setID]=useState()
+  const editarProducto = (id)=>{
     setMostrar (true)
-    
-
+    setID(id)
+    console.log(id);
   }
 
   return (
@@ -25,11 +24,8 @@ const Productos = ({producto,precio,marca,descripcion,unidades,eliminar,editar})
 
       <button onClick={eliminar}>Eliminar</button>
       <button onClick={editarProducto} >Editar</button>
-      {mostrar && <FormularioEditar/>}
+      {mostrar && <FormularioEditar  nombre={producto}/>}
 
-
- 
-  
     </div>
   )
 }

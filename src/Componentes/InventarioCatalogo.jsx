@@ -5,6 +5,7 @@ import Productos from './Productos'
 import ListaProductos from './ListaProductos'
 import { Delete } from '../Fetch/Fetch'
 import { Get } from '../Fetch/Fetch'
+import FormularioEditar from './FormularioEditar'
 
 
 
@@ -15,13 +16,14 @@ const InventarioCatalogo = () => {
     const [intMarca, setIntMarca] = useState("")
     const [intDescripcion, setIntDescripcion] = useState("")
     const [intUnidades, setIntUnidades] = useState("")
-
+    const [id,setID]=useState()
     const [prod, setProd] = useState([])
 
     //Evento del boton para poder ingresar los datos a la API 
     const ingresarproducto = async (e) => {
         e.preventDefault()
         let datos = {
+            id:id,
             producto: intProducto,
             precio: intPrecio,
             marca: intMarca,
@@ -31,7 +33,11 @@ const InventarioCatalogo = () => {
 
         await Post(datos, "productos")
     }
-
+    const obtenerID=(id)=>{
+        setID(id)
+        console.log(id)
+        console.log('holaaa');
+    }
     useEffect(() => {
         const mostrarProducto = async () => {
             const data = await Get("productos")
@@ -53,8 +59,8 @@ const InventarioCatalogo = () => {
                 <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles'/>
 
                 <button onClick={ingresarproducto}>Ingresar producto</button>               
-                <ListaProductos productosAPI={prod} />
-
+                <ListaProductos  productosAPI={prod} editarBTN={obtenerID}/>
+                {id && <FormularioEditar id={id}/>}
             </div>
         </>
     )

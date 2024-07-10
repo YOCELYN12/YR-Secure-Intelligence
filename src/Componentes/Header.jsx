@@ -1,7 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import Contacto from '../Pages/Contacto'
 
 
 const Header = () => {
+  const navegar = useNavigate()
+
   return (
     <>
     <div>
@@ -24,13 +28,13 @@ const Header = () => {
 
         </nav>
 
-        <a href="./Contacto" className='btn'><button>Contactenos</button></a>
-      </header>
-      <div>
-    
-      </div>
+        <button onClick={() => {navegar("/Contacto") }} >Contactenos</button> 
 
+      </header>
+
+    
     </div>
+
     </>
   )
 }

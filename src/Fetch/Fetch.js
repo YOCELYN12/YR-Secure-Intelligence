@@ -58,17 +58,17 @@ export {Post}
 
 
 //Put
-const Put = async(id,estado,endpoint)=>{
+const Put = async(estado,endpoint)=>{
     try {
-        const nuevoEstado = {
-            estado: !estado
-        }
-        const answer = await fetch (URL+id+endpoint,{
+    
+        const answer = await fetch (URL+endpoint+"/"+estado.id,{
+            
             method:"PUT",
             headers:{
                 "Content-Type": "application/json"
             },
-            body:JSON.stringify(nuevoEstado)
+            body:JSON.stringify(estado)
+
         })
         const data = await answer.json()
         console.log(data);

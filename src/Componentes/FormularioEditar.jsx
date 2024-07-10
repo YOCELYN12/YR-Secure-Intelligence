@@ -3,7 +3,7 @@ import { Put } from '../Fetch/Fetch'
 import Productos from './Productos'
 import InventarioCatalogo from './InventarioCatalogo'
 
-const FormularioEditar = () => {
+const FormularioEditar = ({id}) => {
 
     const [producto, setProducto] = useState()
     const [precio, setPrecio] = useState()
@@ -13,15 +13,15 @@ const FormularioEditar = () => {
 
 
     const validarPut = async () => {
-
         let actualizarDatos = {
+            id:id,
             producto: producto,
             precio: precio,
             marca: marca,
             descripcion: descripcion,
             unidades: unidades
         }
-        await Put(id, estado, "productos")
+        await Put(actualizarDatos, "productos")
     }
 
    
@@ -39,7 +39,7 @@ const FormularioEditar = () => {
 
             </div>
 
-            <button onClick={enviarDatos}>Editar Producto</button>
+            <button onClick={validarPut}>Editar Producto</button>
         </div>
     )
 }

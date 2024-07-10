@@ -1,14 +1,14 @@
 import React from 'react'
-import Footer from './Footer'
+import Footer from '../Componentes/Footer'
+import Header from '../Componentes/Header'
 
 const Contacto = () => {
   return (
-    <>
+    <div>
      <Header/>
-
+      
      <Footer/>
-    
-    </>
+    </div>
   )
 }
 
