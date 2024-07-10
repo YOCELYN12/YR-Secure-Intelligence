@@ -33,20 +33,10 @@ const InventarioCatalogo = () => {
 
         await Post(datos, "productos")
     }
-    const obtenerID=(id)=>{
-        setID(id)
-        console.log(id)
-        console.log('holaaa');
-    }
-    useEffect(() => {
-        const mostrarProducto = async () => {
-            const data = await Get("productos")
-            setProd(data)
-        }
-        mostrarProducto()
+  
 
-    }, [prod])
 
+   
    
     return (
         <>
@@ -59,8 +49,8 @@ const InventarioCatalogo = () => {
                 <input type="number" value={intUnidades} onChange={(e) => setIntUnidades(e.target.value)} placeholder='unidades disponibles'/>
 
                 <button onClick={ingresarproducto}>Ingresar producto</button>               
-                <ListaProductos  productosAPI={prod} editarBTN={obtenerID}/>
-                {id && <FormularioEditar id={id}/>}
+                <ListaProductos  productosAPI={prod} />
+                
             </div>
         </>
     )
