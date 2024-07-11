@@ -55,7 +55,7 @@ const Registro = () => {
 
           <p className='letras'>Password</p>
           <input type="password" className='Int' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} />
-          {/*<input className='Int' type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
+         
 
 
           <button className='btn' onClick={() => { navegar("/LoginPagina") }} >Login</button>

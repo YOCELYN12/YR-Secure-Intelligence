@@ -19,7 +19,9 @@ function Trancisiones() {
     
       <Collapse in={open}>
         <div id="example-collapse-text">
-       En la parte inferior izquierda 
+       En la parte inferior izquierda, estan los espacios espacios, cada uno <br />
+       con su identidicador, se coloca lo que se desea cambiar, y una vez completado todo <br />
+       se busca el producto que se quiere editar, y se edita al darle click al boton 
         </div>
       </Collapse>
     </>
