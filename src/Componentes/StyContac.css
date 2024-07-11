@@ -1,0 +1,21 @@
+.int-contacto{
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(120, 118, 118, 0.637);
+    width: 500px;
+}
+
+.div-Contac{
+    background-color: rgb(50, 2, 2);
+}
+
+.letra{
+    color: aliceblue;
+    font-size: 20px;
+}
+
+
+.prueba{
+    background-color: blue;
+}

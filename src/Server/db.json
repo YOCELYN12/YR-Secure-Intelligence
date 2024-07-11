@@ -1,6 +1,32 @@
 {
-    "users": [
-      { "id": 1, "name": "John Doe", "email": "john@example.com" },
-      { "id": 2, "name": "Jane Smith", "email": "jane@example.com" }
-    ]
-  }
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "2000"
+    },
+    {
+      "id": "9ac3",
+      "nombre": "Nana",
+      "email": "yocelynrivera9@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6c90",
+      "nombre": "yocelyn",
+      "email": "yocelynrivera9@gmail.com",
+      "password": "1231234"
+    }
+  ],
+  "productos": [
+    {
+      "id": "97e9",
+      "producto": "Audifonos",
+      "precio": "5000",
+      "marca": "Tech",
+      "descripcion": "Aufinos inalambricos",
+      "unidades": "10"
+    }
+  ]
+}
