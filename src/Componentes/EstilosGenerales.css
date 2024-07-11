@@ -5,21 +5,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .bienvenido{
     color: rgb(0, 0, 0);
 }
 
 .header{
-    background-color: rgb(9, 77, 77);
+    background-color: rgb(43, 3, 3);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    width: 85.6%;
+    width: 110.8%;
     padding: 5px 10%;
     position: relative;
-    top: -30px;
-    left: -40px;
+    top: -60px;
+    left: -60px;
 }
 
 .header .logo img{
@@ -69,7 +70,7 @@
 }
 
 .footer-home{
-    background-color: rgb(9, 77, 77);
+    background-color: rgb(43, 3, 3);
     color: aliceblue;
   
 }
@@ -207,25 +208,4 @@
 .parrafo{
     position: absolute;
     top: 50%;
-}
-.contenedorEditar{
-    display: grid;
-    justify-content: center;
-}
-.inpEditar{
-    width: 200px;
-}
-
-.contenedor-card{
-    background-color: blue;
-}
-.contenedor-productos{
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    gap: 20px;
-}
-.centrar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

@@ -11,36 +11,37 @@
       "nombre": "Nana",
       "email": "yocelynrivera9@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "6c90",
+      "nombre": "yocelyn",
+      "email": "yocelynrivera9@gmail.com",
+      "password": "1231234"
     }
   ],
   "productos": [
     {
-      "id": "3cd7",
-      "producto": "",
-      "precio": "",
-      "marca": "",
-      "descripcion": "",
-      "unidades": ""
-    },
-    {
-      "id": "adfb",
-      "producto": "",
-      "precio": "",
-      "marca": "",
-      "descripcion": "",
-      "unidades": ""
-    },
-    {
       "id": "abd2"
     },
     {
-      "id": "aa15",
-      "producto": "hhghg",
-      "marca": "khkh"
+      "id": "4a97",
+      "producto": "jjjjjjjj"
     },
     {
-      "id": "4a97",
-      "producto": "hola"
+      "id": "3147",
+      "producto": "papa",
+      "precio": "1000",
+      "marca": "papa",
+      "descripcion": "papa",
+      "unidades": "5"
+    },
+    {
+      "id": "7102",
+      "producto": "ffff",
+      "precio": "444",
+      "marca": "ffff",
+      "descripcion": "fffff",
+      "unidades": "4444"
     }
   ]
 }

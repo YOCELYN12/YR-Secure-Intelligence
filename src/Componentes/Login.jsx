@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Get, Post } from '../Fetch/Fetch'
 import Registro from './Registro'
+import './StyRegistro.css'
 
 
 const Login = () => {
@@ -14,20 +15,20 @@ const Login = () => {
   const validarUser = async (e) => {
     try {
       e.preventDefault()
-      const data = await Get("users") 
-      
-    
+      const data = await Get("users")
 
-      const validarUsuarios = data.find(datos=> datos.email === intEmail && datos.password===intPassword)
-      if(validarUsuarios){
+
+
+      const validarUsuarios = data.find(datos => datos.email === intEmail && datos.password === intPassword)
+      if (validarUsuarios) {
         alert("Bienvenido")
         navigate("/Home")
-      }else if(intEmail.trim() ==="" || intPassword.trim() ===""){
+      } else if (intEmail.trim() === "" || intPassword.trim() === "") {
         alert("ingrese texto en los espacios vacios")
-      } else(alert("datos incorrectos"))
-      
+      } else (alert("datos incorrectos"))
 
-    
+
+
     } catch (error) {
       console.log("eror")
     }
@@ -38,15 +39,21 @@ const Login = () => {
 
   return (
     <>
-      <h1>Login</h1>
-      <input type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} />
-      <input type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} />
+      <div className='contenedor-register'>
 
-      <button onClick={validarUser} >Logearse</button>
+        <h1>Login</h1>
 
-      <button onClick={() => { navegar("/RegistroPagina") }}>Registro</button>
-      <button onClick={() => { navegar("/PaginaPrincipal") }} >Pagina principal</button>
+        <p className='letras' >Email</p>
+        <input type="text" className='Int' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} />
 
+        <p className='letras'>Password</p>
+        <input type="text" className='Int' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} />
+
+        <button className='btn' onClick={validarUser} >Logearse</button>
+
+        <button className='btn' onClick={() => { navegar("/RegistroPagina") }}>Registro</button>
+        <button className='btn' onClick={() => { navegar("/PaginaPrincipal") }} >Pagina principal</button>
+      </div>
     </>
   )
 }

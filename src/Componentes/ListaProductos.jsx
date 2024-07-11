@@ -21,13 +21,14 @@ const ListaProductos = ({ productosAPI,editarBTN }) => {
                     marca={produc.marca}
                     descripcion={produc.descripcion}
                     unidades={produc.unidades}
+
                     eliminar={() => {
                         deleteProducto(produc.id)
                     }}
+
                     editarProducto={()=>editarBTN(produc.id)}
                     
-            
-
+        
                 />
 
             ))}

@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import "./EstilosGenerales.css"
 import "./StyRegistro.css"
 import Cards from './Cards'
+import Carrousel from './Carrousel'
 
 const Registro = () => {
   //Costante para el uso del Hook useNavigate
@@ -36,35 +37,43 @@ const Registro = () => {
 
 
   return (
-    <>
-
-      <div className='body'>
+    <> 
+     
+    
+     
 
         <div className='contenedor-register'>
 
-          
+           
             <h1>Registro</h1>
-
+   
             <form action="">
-
-              <input className='Int' type="text" placeholder='NAME' value={intName} onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
-              <input className='Int' type="text" placeholder='EMAIL' value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
-              <input className='Int' type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
-
-
-              <button onClick={() => { navegar("/LoginPagina") }} >Login</button>
-              <button onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
-              <button onClick={registrarse}>Registrarse</button>
               
+              
+              <p className='letras' >Name</p>
+              <input className='Int' type="text"  value={intName} onChange={(e) => setIntName(e.target.value)} /> {/*input para poder agregar el name a la API*/}
+              
+              <p className='letras' >Email</p>
+              <input className='Int'  type="text" value={intEmail} onChange={(e) => setIntEmail(e.target.value)} /> {/*input para poder agregar el email  a la API*/}
+               
+              <p className='letras'>Password</p> 
+              <input type="text"  className='Int'  value={intPassword} onChange={(e) => setIntPassword(e.tarded.value)}/>
+              {/*<input className='Int' type="text" placeholder='PASSWORD' value={intPassword} onChange={(e) => setIntPassword(e.target.value)} /> {/*input para poder agregar la password a la API*/}
+
+
+              <button className='btn' onClick={() => { navegar("/LoginPagina") }} >Login</button>
+              <button className='btn' onClick={() => { navegar("/PaginaPrincipal") }}>Pagina principal</button>
+              <button className='btn' onClick={registrarse}>Registrarse</button>
+
             </form>
-          <Cards/>
+        
           
 
         </div>
 
 
 
-      </div>
+      
 
     </>
 

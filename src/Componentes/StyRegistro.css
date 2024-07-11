@@ -1,22 +1,62 @@
+
+
 .contenedor-register{
     display: grid;
     grid-template-columns: 200px ;
-    width: 450px;
-    height: 480px;
-    margin-top: 3%;
-    margin-left: 30%;
-    background-color:  rgba(9, 77, 77, 0.392);
+    width: 1350px;
+    height: 580px;
+    margin-top: -5.2%;
+    margin-left: -5%;
+    background-image: url(/src/Img/Register.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
-    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    
     
 }
 
-.input-registro {
-    margin-top: 50%;
-    margin-left: 300%;
-    
+.Int{
+ 
+   margin-bottom: 20px;
+   border-radius: 20px;
+   width: 400px;
+   height: 40px;
+   position: relative;
+   left: -100px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: rgba(139, 0, 0, 0.242);
+
+   color: aliceblue;
+
 }
 
-.int{
-    border-radius: 0px;
+
+
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+    width: 180%;
+    background-color: rgba(77, 9, 9, 0.221);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    left: -80px;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.letras{
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  left:-70px;
+}
+
+.body{
+  width: 1190px;
+  height: 805px;
 }

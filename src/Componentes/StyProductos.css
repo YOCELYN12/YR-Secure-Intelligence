@@ -1,0 +1,41 @@
+.intsProductos{
+    display: grid;
+    grid-template-columns:px 350px;
+    margin-bottom: 20px;  
+    position: relative;
+    top: 150px;
+    
+}
+
+
+.contenedorEditar{
+    display: grid;
+    justify-content: center;
+}
+
+.inpEditar{
+    width: 200px;
+}
+
+.contenedor-card{
+    background-color: rgba(91, 7, 4, 0.679);
+    position: relative;
+    top: -150px;
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+    
+}
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnEditar{
+  position: relative;
+  left: -42%;
+  top: 180px;
+}
