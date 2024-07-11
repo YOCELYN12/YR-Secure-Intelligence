@@ -34,8 +34,10 @@ const Footer = () => {
                   <h4>Ayuda</h4>
                 </div>
                 <ul>
-                  <li><a href="#">Preguntas</a></li>
-                  <li><a href="#">Compras</a></li>
+                  <li>Ubicacion: Calle Marin
+                    Telefono: 6280 9722
+                  </li>
+                  <li><a href="./CatalogoProducto">Compras</a></li>
                 </ul>
 
               </div>

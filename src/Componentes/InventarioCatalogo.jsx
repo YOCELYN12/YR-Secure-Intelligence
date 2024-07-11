@@ -7,6 +7,7 @@ import { Delete } from '../Fetch/Fetch'
 import { Get } from '../Fetch/Fetch'
 import { Put } from '../Fetch/Fetch'
 import "./StyProductos.css"
+import Trancisiones from './Trancisiones'
 
 
 const InventarioCatalogo = () => {
@@ -22,7 +23,7 @@ const InventarioCatalogo = () => {
     //Evento del boton para poder ingresar los datos a la API 
     const ingresarproducto = async (e) => {
         e.preventDefault()
-        let datos = {
+        let datos = {                //Se crea un arreglo donde se le pasa el id, previamente establecido en el servidor al igual que la sintaxis
             id: id,
             producto: intProducto,
             precio: intPrecio,
@@ -34,7 +35,7 @@ const InventarioCatalogo = () => {
         await Post(datos, "productos")
     }
 
-    //Constante para poder mostrar la opcion de editar los productos. 
+    //Constantes para poder mostrar la opcion de editar los productos. 
     const [producto, setProducto] = useState()
     const [precio, setPrecio] = useState()
     const [marca, setMarca] = useState()
@@ -49,7 +50,7 @@ const InventarioCatalogo = () => {
         obtenerDatos()
     }, [])
 
-    //Funcion para el boton Editar, y que aparezca las opciones editables. 
+    //Funcion para el boton Editar, y que aparezca las opciones editadas. 
     const validarPut = async (id) => {
         let actualizarDatos = {
             id: id,
@@ -65,9 +66,11 @@ const InventarioCatalogo = () => {
 
     return (
         <>
+
+            <Trancisiones/> 
+
             <div className='Base'>
-
-
+                
                 <input className='intsProductos' type="text" value={intProducto} onChange={(e) => setIntProducto(e.target.value)} placeholder='nombre del artirulo' />
                 <input className='intsProductos' type="text" value={intMarca} onChange={(e) => setIntMarca(e.target.value)} placeholder='marca' />
                 <input className='intsProductos' type="number" value={intPrecio} onChange={(e) => setIntePrecio(e.target.value)} placeholder='precio' />

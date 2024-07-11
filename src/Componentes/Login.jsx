@@ -7,27 +7,29 @@ import './StyRegistro.css'
 
 const Login = () => {
 
-  const navegar = useNavigate()
+  const navegar = useNavigate() // constante para el uso de react router
+
+  //constantes para poder ingresar el usuario
   const [intEmail, setIntEmail] = useState("")
   const [intPassword, setIntPassword] = useState("")
-  const navigate = useNavigate()
 
+  //constante para redireccionar al home si el usuario es correcto 
+  const navigate = useNavigate()
+ 
+  //Funcion para validar / arregar el usuario
   const validarUser = async (e) => {
     try {
+
       e.preventDefault()
       const data = await Get("users")
-
-
-
-      const validarUsuarios = data.find(datos => datos.email === intEmail && datos.password === intPassword)
+ 
+      const validarUsuarios = data.find(datos => datos.email === intEmail && datos.password === intPassword) //El .find recorre el objeto y comprueba lo solicitado
       if (validarUsuarios) {
         alert("Bienvenido")
         navigate("/Home")
       } else if (intEmail.trim() === "" || intPassword.trim() === "") {
         alert("ingrese texto en los espacios vacios")
       } else (alert("datos incorrectos"))
-
-
 
     } catch (error) {
       console.log("eror")

@@ -9,35 +9,16 @@ function PaginaInicio() {
   const navegar = useNavigate()
 
   return (
-    <>
+    <> 
+    <div className='contenedorPagina'>
 
       <div className='container-button'>
+        
         <h1>Bienvenido somos TechSolution</h1>
-        <button className='button-registro' onClick={() => { navegar("/RegistroPagina") }}>Registro</button>
-        <button className='button-login' onClick={() => { navegar("/LoginPagina") }}> Login</button>
-      </div>
-      
-      <div className='contenedor-foto'>
-        <figure>
-
-          <div className='capa'>
-
-            <p >Quienes somos:
-              líderes en el desarrollo de aplicativos web y APIs con un enfoque incomparable en ciberseguridad avanzada. <br />
-              En un mundo cada vez más interconectado, nuestra misión es proporcionar soluciones tecnológicas innovadoras <br />
-              que no solo cumplen con los estándares de funcionalidad y rendimiento, sino que también garantizan la protección <br />
-              integral de los datos y sistemas de nuestros clientes.
-            </p>
-
-          </div>
-
-        </figure>
+        <button className='btnAcceso' onClick={() => { navegar("/RegistroPagina") }}>Registro</button>
+        <button className='btnAcceso' onClick={() => { navegar("/LoginPagina") }}> Login</button>
 
       </div>
-
-
-      <img className='contac' src="src/img/login2.png" alt="" />
-
 
       <div className='identidad'>
         <div>
@@ -50,7 +31,7 @@ function PaginaInicio() {
         </div>
       </div>
 
-
+      </div>
     </>
 
   )

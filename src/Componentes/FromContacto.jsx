@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com';
+import "./StyContac.css"
 
 const FromContacto = () => {
+  //Constante con el objeto para guardar los datos pedidos
   const [fromDatos, setFromDatos] = useState({
     name: '',
     email: "",
@@ -43,51 +45,51 @@ const FromContacto = () => {
 
   return (
     <div>
-
-      <h3>HOLA</h3>
+     <div className="div-Contac" >
 
       <form onSubmit={handleSubmit}>
-        <label >
+        <label className="letra" >
           Nombre:
-          <input type="text" name='name' value={fromDatos.name} onChange={handleChange} required />
+          <input className='int-contacto' type="text" name='name' value={fromDatos.name} onChange={handleChange} required />
         </label>
 
         <br />
 
-        <label>
+        <label className="letra">
           Email:
-          <input type="email" value={fromDatos.email} onChange={handleChange} required />
+          <input className='int-contacto' type="email" value={fromDatos.email} onChange={handleChange} required />
         </label>
 
         <br />
 
-        <label>
+        <label className="letra">
           Telefono:
-          <input type="text" name='phone' value={fromDatos.phone} onChange={handleChange} required />
+          <input className='int-contacto' type="text" name='phone' value={fromDatos.phone} onChange={handleChange} required />
         </label>
 
 
         <br />
 
-        <label>
+        <label className="letra">
           Empresa:
-          <input type="text" name='company' value={fromDatos.company} onChange={handleChange} required />
+          <input className='int-contacto' type="text" name='company' value={fromDatos.company} onChange={handleChange} required />
         </label>
 
         <br />
 
-        <label>
+        <label className="letra">
           Asunto:
-          <input type="text" name='subject' value={fromDatos.message} onChange={handleChange} required />
+          <input className='int-contacto' type="text" name='subject' value={fromDatos.message} onChange={handleChange} required />
         </label>
 
         <br />
         <button type='submit'>Enviar</button>
-
-
+        
       </form>
-      <h3>Hola</h3>
+      </div>
     </div>
+
+
   )
 }
 

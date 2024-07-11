@@ -21,27 +21,12 @@
   ],
   "productos": [
     {
-      "id": "abd2"
-    },
-    {
-      "id": "4a97",
-      "producto": "jjjjjjjj"
-    },
-    {
-      "id": "3147",
-      "producto": "papa",
-      "precio": "1000",
-      "marca": "papa",
-      "descripcion": "papa",
-      "unidades": "5"
-    },
-    {
-      "id": "7102",
-      "producto": "ffff",
-      "precio": "444",
-      "marca": "ffff",
-      "descripcion": "fffff",
-      "unidades": "4444"
+      "id": "97e9",
+      "producto": "Audifonos",
+      "precio": "5000",
+      "marca": "Tech",
+      "descripcion": "Aufinos inalambricos",
+      "unidades": "10"
     }
   ]
 }
